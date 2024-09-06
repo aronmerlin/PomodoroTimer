@@ -8,24 +8,25 @@ import org.example.Model.PomodoroModel;
 import org.example.View.PomodoroView;
 import org.example.View.Components.ButtonMenue;
 import org.example.View.Components.PlayButtonHBox;
+import org.example.View.Components.TimeRing;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 
 public class PomodoroTimerApp extends Application{
 
-    PomodoroModel pomodoroModel = new PomodoroModel();
+    PomodoroModel pomodoroModel = new PomodoroModel(25 * 60);
     PomodoroView pomodoroView = new PomodoroView();
     PomodoroController pomodoroController = new PomodoroController(pomodoroModel, pomodoroView);
 
+    
     ButtonMenue buttonMenue = new ButtonMenue();
     PlayButtonHBox playButtonHBox = new PlayButtonHBox();
+    TimeRing timeRing = new TimeRing();
     
     
     @Override
@@ -40,6 +41,7 @@ public class PomodoroTimerApp extends Application{
         BorderPane root = new BorderPane();
         root.getStyleClass().add("root-background");
         root.setTop(buttonMenue);
+        root.setCenter(timeRing);
         root.setBottom(playButtonHBox);
         
 

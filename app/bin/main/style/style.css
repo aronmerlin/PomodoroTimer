@@ -7,7 +7,18 @@
 
     -fx-background-color: #28435D;
     -fx-text-fill: white;
+    -fx-font-weight: MEDIUM;
 
+}
+
+.time-ring{
+    -fx-stroke: #28435D;
+    -fx-stroke-width: 10px;
+}
+
+.time-display{
+    -fx-font-size: 30px;
+    -fx-text-fill: white;
 }
 
 .play-button{
@@ -19,4 +30,5 @@
     -fx-max-height: 50px; 
     -fx-background-color: #28435D; 
     -fx-text-fill: white;
+
 }
