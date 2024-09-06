@@ -1,0 +1,22 @@
+.root-background{
+    -fx-background-color: #507CA5;
+}
+
+
+.my-buttons{
+
+    -fx-background-color: #28435D;
+    -fx-text-fill: white;
+
+}
+
+.play-button{
+
+    -fx-background-radius: 50%;
+    -fx-min-width: 50px;          
+    -fx-min-height: 50px; 
+    -fx-max-width: 50px; 
+    -fx-max-height: 50px; 
+    -fx-background-color: #28435D; 
+    -fx-text-fill: white;
+}

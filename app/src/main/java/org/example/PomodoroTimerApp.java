@@ -6,13 +6,59 @@ package org.example;
 import org.example.Controller.PomodoroController;
 import org.example.Model.PomodoroModel;
 import org.example.View.PomodoroView;
+import org.example.View.Components.ButtonMenue;
+import org.example.View.Components.PlayButtonHBox;
 
-public class PomodoroTimerApp {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+
+public class PomodoroTimerApp extends Application{
+
+    PomodoroModel pomodoroModel = new PomodoroModel();
+    PomodoroView pomodoroView = new PomodoroView();
+    PomodoroController pomodoroController = new PomodoroController(pomodoroModel, pomodoroView);
+
+    ButtonMenue buttonMenue = new ButtonMenue();
+    PlayButtonHBox playButtonHBox = new PlayButtonHBox();
     
+    
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        
+
+        
+
+
+
+        BorderPane root = new BorderPane();
+        root.getStyleClass().add("root-background");
+        root.setTop(buttonMenue);
+        root.setBottom(playButtonHBox);
+        
+
+
+        Scene scene = new Scene(root, 288, 409);
+        scene.getStylesheets().add(getClass().getResource("/style/style.css").toExternalForm());
+
+
+        primaryStage.setTitle("Pomodoro Timer");
+        primaryStage.setResizable(false);
+        primaryStage.initStyle(StageStyle.UTILITY);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+    }
 
     public static void main(String[] args) {
-        PomodoroModel pomodoroModel = new PomodoroModel();
-        PomodoroView pomodoroView = new PomodoroView();
-        PomodoroController pomodoroController = new PomodoroController(pomodoroModel, pomodoroView);
+        launch(args);
     }
+
+   
 }
