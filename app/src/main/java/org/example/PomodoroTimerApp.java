@@ -24,9 +24,6 @@ public class PomodoroTimerApp extends Application{
     PomodoroController pomodoroController = new PomodoroController(pomodoroModel, pomodoroView);
 
     
-    ButtonMenue buttonMenue = new ButtonMenue();
-    PlayButtonHBox playButtonHBox = new PlayButtonHBox();
-    TimeRing timeRing = new TimeRing();
     
     
     @Override
@@ -38,15 +35,10 @@ public class PomodoroTimerApp extends Application{
 
 
 
-        BorderPane root = new BorderPane();
-        root.getStyleClass().add("root-background");
-        root.setTop(buttonMenue);
-        root.setCenter(timeRing);
-        root.setBottom(playButtonHBox);
-        
+     
 
 
-        Scene scene = new Scene(root, 288, 409);
+        Scene scene = new Scene(pomodoroView, 288, 409);
         scene.getStylesheets().add(getClass().getResource("/style/style.css").toExternalForm());
 
 

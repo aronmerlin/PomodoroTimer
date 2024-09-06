@@ -45,4 +45,42 @@ public class ButtonMenue extends HBox{
         this.setSpacing(10);
         this.setPadding(new Insets(30, 20, 20, 20));
     }
+
+
+
+    public Button getButton25() {
+        return button25;
+    }
+
+
+
+    public void setButton25(Button button25) {
+        this.button25 = button25;
+    }
+
+
+
+    public Button getButton5() {
+        return button5;
+    }
+
+
+
+    public void setButton5(Button button5) {
+        this.button5 = button5;
+    }
+
+
+
+    public Button getButton60() {
+        return button60;
+    }
+
+
+
+    public void setButton60(Button button60) {
+        this.button60 = button60;
+    }
+
+    
 }
