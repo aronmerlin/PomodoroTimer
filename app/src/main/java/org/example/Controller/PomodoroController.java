@@ -22,6 +22,18 @@ public class PomodoroController {
         }));
     }
 
+    public void startTimeline(){
+        timeline.play();
+    }
+
+    public void stopTimeline() {
+        timeline.stop();
+    }
+
+    public void pauseTimeline() {
+        timeline.pause();
+    }
+
 
     
 }
