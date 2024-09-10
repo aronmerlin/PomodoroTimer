@@ -54,5 +54,18 @@ public class PlayButtonHBox extends StackPane{
         this.playButton = playButton;
     }
 
+    public void switchIcon(boolean playButtonPressed) {
+        if(!playButtonPressed){
+            playImage = new Image(getClass().getResourceAsStream("/img/pause.png"));
+            imageView.setTranslateX(0);
+            
+        }else{
+            playImage = new Image(getClass().getResourceAsStream("/img/play.png"));
+            imageView.setTranslateX(2);
+            
+        }
+        imageView.setImage(playImage);
+    }
+
     
 }

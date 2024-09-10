@@ -14,6 +14,14 @@ public class PomodoroModel {
         remainingTime--;
     }
 
+    public void setTotalTime(int totalTime) {
+        this.totalTime = totalTime;
+    }
+
+    public void setRemainingTime(int remainingTime) {
+        this.remainingTime = remainingTime;
+    }
+
     public void resetTimer(){
         remainingTime = totalTime;
     }

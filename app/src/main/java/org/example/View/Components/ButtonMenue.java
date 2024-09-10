@@ -82,5 +82,14 @@ public class ButtonMenue extends HBox{
         this.button60 = button60;
     }
 
+    public void setButtonColorButtonPressed(Button button) {
+        button.getStyleClass().add("my-button-pressed");
+    }
+
+    public void setButtonColorNotPressed(Button button) {
+        button.getStyleClass().remove("my-button-pressed");
+
+    }
+
     
 }

@@ -3,8 +3,8 @@
  */
 package org.example;
 
-import org.example.Controller.PomodoroController;
 import org.example.Model.PomodoroModel;
+import org.example.View.PomodoroController;
 import org.example.View.PomodoroView;
 import org.example.View.Components.ButtonMenue;
 import org.example.View.Components.PlayButtonHBox;

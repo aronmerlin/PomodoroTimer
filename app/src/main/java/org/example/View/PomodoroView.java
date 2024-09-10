@@ -8,9 +8,9 @@ import javafx.scene.layout.BorderPane;
 
 public class PomodoroView extends BorderPane{
 
-    ButtonMenue buttonMenue;
-    PlayButtonHBox playButtonHBox;
-    TimeRing timeRing;
+    public ButtonMenue buttonMenue;
+    public PlayButtonHBox playButtonHBox;
+    public TimeRing timeRing;
 
     public PomodoroView() {
 

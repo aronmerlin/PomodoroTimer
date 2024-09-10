@@ -8,7 +8,14 @@
     -fx-background-color: #28435D;
     -fx-text-fill: white;
     -fx-font-weight: MEDIUM;
+    
 
+}
+
+.my-button-pressed{
+    -fx-background-color: #6489ac;
+    -fx-text-fill: white;
+    -fx-font-weight: MEDIUM;
 }
 
 .time-ring{
