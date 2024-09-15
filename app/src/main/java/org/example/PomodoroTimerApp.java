@@ -6,13 +6,10 @@ package org.example;
 import org.example.Model.PomodoroModel;
 import org.example.View.PomodoroController;
 import org.example.View.PomodoroView;
-import org.example.View.Components.ButtonMenue;
-import org.example.View.Components.PlayButtonHBox;
-import org.example.View.Components.TimeRing;
+
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -24,21 +21,11 @@ public class PomodoroTimerApp extends Application{
     PomodoroController pomodoroController = new PomodoroController(pomodoroModel, pomodoroView);
 
     
-    
-    
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        
-
-        
-
-
-
-     
-
-
-        Scene scene = new Scene(pomodoroView, 288, 409);
+    
+        Scene scene = new Scene(pomodoroView, 288, 410);
         scene.getStylesheets().add(getClass().getResource("/style/style.css").toExternalForm());
 
 

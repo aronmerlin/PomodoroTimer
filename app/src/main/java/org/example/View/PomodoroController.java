@@ -37,11 +37,14 @@ public class PomodoroController {
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             pomodoroModel.decrementTime();
             pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime(), pomodoroModel.getTotalTime());
+            if(pomodoroModel.getRemainingTime() == 0){
+                stopTimeline();
+            }
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
 
         // Interaktive Lemente aus TimeRing holen
-        timeReducing = pomodoroView.getTimeRing().getTimeReducing();
+        // timeReducing = pomodoroView.getTimeRing().getTimeReducing();
         timeDisplay = pomodoroView.getTimeRing().getTimeDisplay();
 
         // Interaktive Elemente aus PlayButtonHBox
