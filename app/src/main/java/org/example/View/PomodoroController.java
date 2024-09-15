@@ -36,7 +36,7 @@ public class PomodoroController {
 
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             pomodoroModel.decrementTime();
-            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime());
+            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime(), pomodoroModel.getTotalTime());
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
 
@@ -53,7 +53,7 @@ public class PomodoroController {
         button60 = pomodoroView.getButtonMenue().getButton60();
 
         buttonColorChange(timeButtonPressed);
-        
+
         init();
     }
 
@@ -75,7 +75,7 @@ public class PomodoroController {
         button5.addEventHandler(ActionEvent.ACTION, e -> {
             pomodoroModel.setTotalTime(5 * 60);
             pomodoroModel.setRemainingTime(5 * 60);
-            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime());
+            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime(), pomodoroModel.getTotalTime());
             timeButtonPressed = "button5";
             buttonColorChange(timeButtonPressed);
             
@@ -83,14 +83,14 @@ public class PomodoroController {
         button25.addEventHandler(ActionEvent.ACTION, e -> {
             pomodoroModel.setTotalTime(25 * 60);
             pomodoroModel.setRemainingTime(25 * 60);
-            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime());
+            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime(), pomodoroModel.getTotalTime());
             timeButtonPressed = "button25";
             buttonColorChange(timeButtonPressed);
         });
         button60.addEventHandler(ActionEvent.ACTION, e -> {
             pomodoroModel.setTotalTime(60 * 60);
             pomodoroModel.setRemainingTime(60 * 60);
-            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime());
+            pomodoroView.getTimeRing().updateTime(pomodoroModel.getRemainingTime(), pomodoroModel.getTotalTime());
             timeButtonPressed = "button60";
             buttonColorChange(timeButtonPressed);
         });

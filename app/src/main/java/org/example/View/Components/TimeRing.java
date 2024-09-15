@@ -1,5 +1,6 @@
 package org.example.View.Components;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -26,10 +27,15 @@ public class TimeRing extends StackPane{
         timeReducing.setType(ArcType.OPEN);
         timeReducing.setFill(Color.TRANSPARENT);
 
-        
+        timeDisplay.setPrefWidth(90);
+        timeDisplay.setAlignment(Pos.CENTER);
     }
 
-    public void updateTime(int remainingTime) {
+    public void updateTime(int remainingTime, int totalTime) {
+        double prozent = (double) remainingTime / totalTime;
+        double winkel = prozent * 360;
+        timeReducing.setLength(winkel);
+
         int minutes = remainingTime / 60;
         int seconds = remainingTime % 60;
 
